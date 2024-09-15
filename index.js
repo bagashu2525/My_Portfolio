@@ -8,17 +8,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-const glowElements = document.querySelectorAll('.infoimg');
+// const glowElements = document.querySelectorAll('.infoimg');
 
-glowElements.forEach(element => {
-  element.addEventListener('mouseover', () => {
-    element.style.boxShadow = '0px 0px 30px rgba(34, 255, 0, 1)';
-  });
+// glowElements.forEach(element => {
+//   element.addEventListener('mouseover', () => {
+//     element.style.boxShadow = '0px 0px 30px rgba(34, 255, 0, 1)';
+//   });
 
-  element.addEventListener('mouseout', () => {
-    element.style.boxShadow = '0px 0px 10px rgba(34, 255, 0, 0.5)';
-  });
-});
+//   element.addEventListener('mouseout', () => {
+//     element.style.boxShadow = '0px 0px 10px rgba(34, 255, 0, 0.5)';
+//   });
+// });
 
   document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('.project1');
@@ -42,4 +42,27 @@ glowElements.forEach(element => {
       observer.observe(element);
     });
   });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.skillinfo');
   
+    const observerOptions = {
+      root: null, // Use the viewport as the container
+      rootMargin: '0px',
+      threshold: 0.1 // Trigger when 10% of the element is visible
+    };
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadeInBottom');
+          observer.unobserve(entry.target); // Stop observing once the animation is triggered
+        }
+      });
+    }, observerOptions);
+  
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  });

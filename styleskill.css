@@ -1,7 +1,62 @@
+*{
+    --redcolor: #910101;
+}
 .skills{
-    background-image: radial-gradient(#364d36 1px, transparent 1px);
+    background-image: radial-gradient(#4d3636 1px, transparent 1px);
     background-size: 22px 22px;
     background-color: #000000;
-    padding-top: 100px;
+    /* padding-top: 1%; */
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.skillinfo{
+    background-color: #ff0000;
+    -webkit-box-shadow: -1px 0 32px 6px #fa1515;
+    -moz-box-shadow: -1px 0 32px 6px #fa1515;
+    box-shadow: -1px 0 32px 6px #fa1515;
+    /* box-shadow: 5.5px 7.5px 7.5px -5px #059101; */
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* overflow: ; */
+    flex-wrap: wrap;
+    height: auto;
+    width: 60%;
+}
+.skillicon{
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 20%;
+    max-width: 150px;
+    margin: 10px ;
+}
+.skillinfo{
+    opacity: 0; /* Start with the element hidden */
+    transform: translateY(100px); /* Start with the element 100px below its original position */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition for the fade-in effect and position change */
+}
+.fadeInBottom {
+    opacity: 1; /* Make the element visible */
+    transform: translateY(0); /* Move the element to its original position */
+}
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .skillinfo {
+        width: 100%; /* Make it full-width for smaller screens */
+    }
+    .skillicon {
+        width: 40%; /* Adjust width for smaller icons on mobile */
+        height: 80px; /* Reduce height for smaller screens */
+    }
 }
