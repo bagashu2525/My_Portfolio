@@ -41,15 +41,8 @@
     max-width: 150px;
     margin: 10px ;
 }
-.skillinfo{
-    opacity: 0; /* Start with the element hidden */
-    transform: translateY(100px); /* Start with the element 100px below its original position */
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition for the fade-in effect and position change */
-}
-.fadeInBottom {
-    opacity: 1; /* Make the element visible */
-    transform: translateY(0); /* Move the element to its original position */
-}
+
+
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     .skillinfo {
