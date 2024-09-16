@@ -17,6 +17,7 @@ ScrollReveal().reveal('.project1', {
   origin: 'bottom', 
   distance: '50px' 
 });
+
 // const glowElements = document.querySelectorAll('.infoimg');
 
 // glowElements.forEach(element => {
