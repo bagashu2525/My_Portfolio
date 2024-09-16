@@ -5,7 +5,7 @@
     background-image: radial-gradient(#4d3636 1px, transparent 1px);
     background-size: 22px 22px;
     background-color: #000000;
-    /* padding-top: 1%; */
+    padding-top: 100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -59,4 +59,11 @@
         width: 40%; /* Adjust width for smaller icons on mobile */
         height: 80px; /* Reduce height for smaller screens */
     }
+}
+@media (max-width: 550px) {
+    .skills{
+        width:600px;
+        
+    }
+    
 }

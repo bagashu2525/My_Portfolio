@@ -123,7 +123,6 @@ body{
 
 
 
-
 .container{
     height: 100%;
     width: 100%;
@@ -142,6 +141,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media (max-width: 550px) {
+    .main{
+        width:600px;
+        
+    }
+    
 }
 .info{
     height: auto;
