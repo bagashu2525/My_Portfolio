@@ -1,5 +1,8 @@
-*{
+* {
     --redcolor: #910101;
+    --shadowcolor: rgba(145, 1, 1, 0.8);
+    --bg-dark: #000000;
+    --text-color: #ffdddd;
 }
 .skills{
     padding-top: 100px;
@@ -37,8 +40,12 @@
     width: 20%;
     max-width: 150px;
     margin: 10px ;
+    transform: scale(1);
 }
-
+.skillicon:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgb(255, 179, 179);
+}
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {

@@ -17,7 +17,26 @@ ScrollReveal().reveal('.project1', {
   origin: 'bottom', 
   distance: '50px' 
 });
-
+ScrollReveal().reveal('#btech', { 
+  duration: 2000, 
+  origin: 'right', 
+  distance: '50px' 
+});
+ScrollReveal().reveal('#bsc', { 
+  duration: 2000, 
+  origin: 'left', 
+  distance: '50px' 
+});
+ScrollReveal().reveal('#hs', { 
+  duration: 2000, 
+  origin: 'right', 
+  distance: '50px' 
+});
+ScrollReveal().reveal('#s', { 
+  duration: 2000, 
+  origin: 'left', 
+  distance: '50px' 
+});
 // const glowElements = document.querySelectorAll('.infoimg');
 
 // glowElements.forEach(element => {
