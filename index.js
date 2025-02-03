@@ -37,14 +37,29 @@ ScrollReveal().reveal('#s', {
   origin: 'left', 
   distance: '50px' 
 });
-// const glowElements = document.querySelectorAll('.infoimg');
+ScrollReveal().reveal('.contactinfo', { 
+  duration: 2000, 
+  origin: 'bottom', 
+  distance: '50px' 
+});
 
-// glowElements.forEach(element => {
-//   element.addEventListener('mouseover', () => {
-//     element.style.boxShadow = '0px 0px 30px rgba(34, 255, 0, 1)';
-//   });
+//light-mode
+let lightmode = localStorage.getItem('light')
+const themeswitch = document.getElementById('theme-switch')
 
-//   element.addEventListener('mouseout', () => {
-//     element.style.boxShadow = '0px 0px 10px rgba(34, 255, 0, 0.5)';
-//   });
-// });
+const enablelightmode =()=>{
+  document.body.classList.add('light')
+  localStorage.setItem('light','active')
+}
+
+const disablelightmode = () =>{
+  document.body.classList.remove('light')
+  localStorage.setItem('light',null)
+}
+
+if(lightmode === "active") enablelightmode()
+
+themeswitch.addEventListener("click",()=>{
+  lightmode = localStorage.getItem('light')
+  lightmode !== "active" ? enablelightmode() : disablelightmode()
+})

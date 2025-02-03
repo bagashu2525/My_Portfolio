@@ -1,144 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleproject.css">
-    <link rel="stylesheet" href="styleskill.css">
-    <link rel="stylesheet" href="styleedu.css">
-    <link rel="stylesheet" href="styleAbtCnt.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./index.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
-<body>
+
+<body >
     <div class="container" id="home">
-            <div class="navbar">
-                <ul class="Title">
-                    <li style="color: rgb(255, 0, 0); font-size: 28px;">Ashu.portfolio</li>
+        <div class="navbar">
+            <ul class="Title">
+                <li style="color: rgb(255, 116, 116); font-size: 28px;">Ashu.portfolio</li>
+            </ul>
+            <div class="navigation">
+                <input type="checkbox" id="toggle-menu" class="toggle-menu" />
+                <label for="toggle-menu" class="hamburger-menu"></label>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#edu">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="navigation">
-                    <input type="checkbox" id="toggle-menu" class="toggle-menu"/>
-                    <label for="toggle-menu" class="hamburger-menu"></label>
-                    <ul class="menu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#project">Projects</a></li>
-                        <li><a href="#skill">Skills</a></li>
-                        <li><a href="#edu">Education</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+            </div>
+            <button id="theme-switch">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            </button>
+        </div>
+        <div class="main">
+            <div class="info">
+                <div class="img-wrapper">
+                    <div class="infoimg fade-in-right">
+                        <img src="Images/casual.jpeg" alt="My Image">
+                    </div>
+                    <div class="circle fade-in-top"></div>
+                    <div class="circle2 fade-in-bottom"></div>
+                </div>
+                <div class="infodata">
+                    <div class="hello fade-in-left">Hello👋,</div>
+                    <div class="name fade-in-right">Myself<span style="color: rgb(255, 0, 0);"> Asmita Bag</span></div>
+                    <div class="desig fade-in-left">I am a <span class="text fade-in-right"
+                            style="color:rgb(255, 0, 0);"></span></div>
+                    <div class="socials fade-in-bottom">
+                        <div class="icon"><a href="https://www.facebook.com/asmita.bag.31"><i style="font-size:30px"
+                                    class="fa">&#xf09a;</i></a></div>
+                        <div class="icon" ><a
+                                href="https://www.linkedin.com/in/asmita-bag-361968232/"><i
+                                    class="fa fa-linkedin-square" style="font-size:30px;background-color: transparent;"></i></a></div>
+                        <div class="icon" ><a
+                                href="https://github.com/bagashu2525"><i class="fa fa-github"
+                                    style="font-size: 30px; "></i></a></div>
+                        <div class="icon"><a href="https://leetcode.com/u/bagashu777/"><span
+                                    class="simple-icons--leetcode"></span></a></div>
+                    </div>
+                    <div class="btn fade-in-bottom" id="downloadCV">
+                        <a href="./cv/ResumeAsmita[1].pdf" download="myCV.pdf"><button class="button-30">Download
+                                CV</button></a>
+                    </div>
                 </div>
             </div>
-            <div class="main">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <div class="infoimg fade-in-right">
-                            <img src="Images/casual.jpeg" alt="My Image">
-                        </div>
-                        <div class="circle fade-in-top"></div>
-                        <div class="circle2 fade-in-bottom"></div>
-                    </div>
-                    <div class="infodata">
-                        <div class="hello fade-in-left">Hello👋,</div>
-                        <div class="name fade-in-right">Myself<span style="color: rgb(255, 0, 0);"> Asmita Bag</span></div>
-                        <div class="desig fade-in-left">I am a <span class="text fade-in-right" style="color:rgb(255, 0, 0);"></span></div>
-                        <div class="socials fade-in-bottom">
-                            <div class="icon"><a href="https://www.facebook.com/asmita.bag.31"><i style="font-size:30px" class="fa">&#xf09a;</i></a></div>
-                            <div class="icon" style="background-color: rgb(255, 255, 255);"><a href="https://www.linkedin.com/in/asmita-bag-361968232/"><i class="fa fa-linkedin-square" style="font-size:30px;color:black;"></i></a></div>
-                            <div class="icon" style="background-color: rgb(255, 255, 255);"><a href="https://github.com/bagashu2525"><i class="fa fa-github" style="font-size: 30px; color:rgb(0, 0, 0)"></i></a></div>
-                            <div class="icon" ><a href="https://leetcode.com/u/bagashu777/"><span class="simple-icons--leetcode"></span></a></div>
-                        </div>
-                        <div class="btn fade-in-bottom" id="downloadCV">
-                            <a href="./cv/ResumeAsmita[1].pdf" download="myCV.pdf"><button class="button-30">Download CV</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         <div class="projects" id="project">
             <div class="hello fade-in-bottom " style="text-align: center;">Projects</div>
             <div class="projectinfo">
                 <div class="project1 " onload>
                     <div class="projectimg"><img src="./Images/industryIcon.png" alt=""></div>
                     <div class="projectname">Air Pollution and Monitoring System [IOT + Web]</div>
-                    <div class="projectdescription">The "Air Pollution Monitoring System" project aims to track real-time air quality by collecting data on pollutants such as CO2 and particulate matter (PM2.5, PM10). It likely utilizes sensors to capture this data, which is then processed and displayed through a user-friendly interface, helping raise awareness and provide insights for pollution control.</div>
-                    <div class="toolsname">Made with: <img src="./Images/html.png" width="30" height="30" alt="HTML"> <img src="./Images/css-3.png" width="30" height="30" alt="HTML"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/></div>
-                    <div class="github"><a href="https://github.com/bagashu2525/Air-Pollution-Monitoring-System">GitHub</a></div>
-                    
+                    <div class="projectdescription">The "Air Pollution Monitoring System" project aims to track
+                        real-time air quality by collecting data on pollutants such as CO2 and particulate matter
+                        (PM2.5, PM10). It likely utilizes sensors to capture this data, which is then processed and
+                        displayed through a user-friendly interface, helping raise awareness and provide insights for
+                        pollution control.</div>
+                    <div class="toolsname">Made with: <img src="./Images/html.png" width="30" height="30" alt="HTML">
+                        <img src="./Images/css-3.png" width="30" height="30" alt="HTML"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                            alt="mysql" width="40" height="40" /> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+                            alt="php" width="40" height="40" />
+                    </div>
+                    <div class="github"><a
+                            href="https://github.com/bagashu2525/Air-Pollution-Monitoring-System">GitHub</a></div>
+
                 </div>
                 <div class="project1">
                     <div class="projectimg"><img src="./Images/Screenshot 2024-09-16 181655.png" alt=""></div>
                     <div class="projectname">Smart Farming with Auto Pumping System [IOT + Web]</div>
-                    <div class="projectdescription">The "Smart Farming with Auto Pumping System" project aims to automate irrigation by using soil moisture sensors to monitor water levels in real-time. When the moisture level drops below a set threshold, the system activates pumps to water the crops automatically. This helps optimize water usage, improving agricultural efficiency and reducing waste.</div>
-                    <div class="toolsname">Made with: <img src="./Images/html.png" width="30" height="30" alt="HTML"> <img src="./Images/css-3.png" width="30" height="30" alt="HTML"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> <img src="./Images/nodejs.png" width="30" height="30" alt="HTML"></div>
-                    <div class="github"><a href="https://github.com/bagashu2525/Smart-Farming-with-Auto-Pumping-System">GitHub</a></div>
-                    
+                    <div class="projectdescription">The "Smart Farming with Auto Pumping System" project aims to
+                        automate irrigation by using soil moisture sensors to monitor water levels in real-time. When
+                        the moisture level drops below a set threshold, the system activates pumps to water the crops
+                        automatically. This helps optimize water usage, improving agricultural efficiency and reducing
+                        waste.</div>
+                    <div class="toolsname">Made with: <img src="./Images/html.png" width="30" height="30" alt="HTML">
+                        <img src="./Images/css-3.png" width="30" height="30" alt="HTML"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                            alt="mysql" width="40" height="40" /> <img src="./Images/nodejs.png" width="30" height="30"
+                            alt="HTML">
+                    </div>
+                    <div class="github"><a
+                            href="https://github.com/bagashu2525/Smart-Farming-with-Auto-Pumping-System">GitHub</a>
+                    </div>
+
                 </div>
                 <div class="project1">
-                    <div class="projectimg"><img src="./Images/snakeIcon.jpg" alt="" style="object-fit: inherit;"></div>
+                    <div class="projectimg"><img src="./Images/snakeIcon.png" alt="" style="object-fit: inherit;"></div>
                     <div class="projectname">Snake Game Using Java</div>
-                    <div class="projectdescription">The "Snake Game Java Project" repository is a Java-based implementation of the classic Snake game. In this game, the player controls a snake that moves around the screen to collect food. As the snake eats, it grows longer, and the objective is to avoid colliding with the walls or the snake's own body. The project likely uses Java's graphics libraries for the game interface and logic, providing a simple, interactive gaming experience.</div>
-                    <div class="toolsname">Made with: <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/></div>
-                    <div class="github"><a href="https://github.com/bagashu2525/Snake-Game-Java-Project">GitHub</a></div>
+                    <div class="projectdescription">The "Snake Game Java Project" repository is a Java-based
+                        implementation of the classic Snake game. In this game, the player controls a snake that moves
+                        around the screen to collect food. As the snake eats, it grows longer, and the objective is to
+                        avoid colliding with the walls or the snake's own body. The project likely uses Java's graphics
+                        libraries for the game interface and logic, providing a simple, interactive gaming experience.
+                    </div>
+                    <div class="toolsname">Made with: <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                            alt="java" width="40" height="40" /></div>
+                    <div class="github"><a href="https://github.com/bagashu2525/Snake-Game-Java-Project">GitHub</a>
+                    </div>
                 </div>
             </div>
-            
+
         </div>
         <div class="skills" id="skill">
-            <div class="hello fade-in-bottom " style="text-align: center;">My Skills</div>
+            <div class="hello fade-in-bottom " style="text-align: center;">My <span style="color: rgb(255, 0, 0);">
+                    Skills</span></div>
             <div class="skillinfo">
 
-                    <div class="skillicon"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="60" height="60"/></div>
-                    <div class="skillicon"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="60" height="60"/>  </div>
-                    <div class="skillicon"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="60" height="60"/>  </div>
-                    <div class="skillicon"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="60" height="60"/>  </div>
-                    <div class="skillicon"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="60" height="60"/>  </div>
-                    <div class="skillicon"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="60" height="60"/>  </div>
-                    <div class="skillicon"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="60" height="60"/> </div>
-                    <div class="skillicon"><img src="./Images/html.png" width="60" height="60" alt="HTML"></div>
-                    <div class="skillicon"><img src="./Images/css-3.png" width="60" height="60" alt="HTML"></div>
-                    <div class="skillicon"><img src="./Images/nodejs.png" width="60" height="60" alt="HTML"></div>
+                <div class="skillicon"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c"
+                        width="60" height="60" /></div>
+                <div class="skillicon"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                        alt="java" width="60" height="60" /> </div>
+                <div class="skillicon"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                        alt="mysql" width="60" height="60" /> </div>
+                <div class="skillicon"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg"
+                        alt="oracle" width="60" height="60" /> </div>
+                <div class="skillicon"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+                        alt="php" width="60" height="60" /> </div>
+                <div class="skillicon"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                        alt="python" width="60" height="60" /> </div>
+                <div class="skillicon"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
+                        alt="redux" width="60" height="60" /> </div>
+                <div class="skillicon"><img src="./Images/html.png" width="60" height="60" alt="HTML"></div>
+                <div class="skillicon"><img src="./Images/css-3.png" width="60" height="60" alt="HTML"></div>
+                <div class="skillicon"><img src="./Images/nodejs.png" width="60" height="60" alt="HTML"></div>
             </div>
         </div>
         <div class="education" id="edu">
             <div class="hello fade-in-bottom " style="text-align: center;">Education</div>
             <div class="educationinfo">
-                <div class="infoEdu" id="btech">
-                    <div class="heading">Bachelor of Technology (B.Tech.) - Information Technology</div>
-                    <div class="details">University of Calcutta, KOLKATA
-                        <br>Oct 2023 - 2026 (Expected)
+                <div class="educationgrid" id="btech">
+                    <div class="infoEdu">
+                        <div class="heading">Bachelor of Technology (B.Tech.) - Information Technology</div>
+                        <div class="details">University of Calcutta, KOLKATA
+                            <br>Oct 2023 - 2026 (Expected)
+                        </div>
                     </div>
                 </div>
-                <div class="infoEdu" id="bsc">
-                    <div class="heading">B.Sc (Hons) - Computer Science</div>
-                    <div class="details">University of Calcutta, KOLKATA
-                        CGPA :  8.888
-                        <br>Aug 2020 - Aug 2023
+                <div class="educationgrid" id="bsc">
+                    <div class="infoEdu">
+                        <div class="heading">B.Sc (Hons) - Computer Science</div>
+                        <div class="details">University of Calcutta, KOLKATA
+                            CGPA : 8.888
+                            <br>Aug 2020 - Aug 2023
                         </div>
+                    </div>
                 </div>
-                <div class="infoEdu" id="hs">
-                    <div class="heading">Higher Secondary Exam (10+2)</div>
-                    <div class="details">Kumar Ashutosh Institution of Boys'(Main), KOLKATA
-                        Percentage : 89.2
-                        <br>Sep 2019 - Jun 2020</div>
-                </div>   
-                <div class="infoEdu" id="s">
-                    <div class="heading">Secondary Exam</div>
-                    <div class="details">Sri Aurobindo Siksha Sadan(High School), KOLKATA
-                        Percentage : 74.9
-                        <br>2017 - Jun 2018</div>
+                <div class="educationgrid" id="hs">
+                    <div class="infoEdu">
+                        <div class="heading">Higher Secondary Exam (10+2)</div>
+                        <div class="details">Kumar Ashutosh Institution of Boys'(Main), KOLKATA
+                            Percentage : 89.2
+                            <br>Sep 2019 - Jun 2020
+                        </div>
+                    </div>
+
                 </div>
-                    
-                
-                
+                <div class="educationgrid" id="s">
+                    <div class="infoEdu">
+                        <div class="heading">Secondary Exam</div>
+                        <div class="details">Sri Aurobindo Siksha Sadan(High School), KOLKATA
+                            Percentage : 74.9
+                            <br>2017 - Jun 2018
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </div>
-        <div class="about" id="about">hello about</div>
-        <div class="contact" id="contact">hello contact</div>
+
+        <div class="contact" id="contact">
+            <div class="hello fade-in-bottom " style="text-align: center;">Contact <span
+                    style="color: rgb(255, 0, 0);">Me</span></div>
+            <div class="contactinfo">
+                <div class="hello" id="lgit" style="text-align: center;">Let's get in touch!!</div>
+                <div class="contactcard">
+                    <form>
+                        <input type="text" placeholder="Your First Name">
+                        <input type="text" placeholder="Your Last Name">
+                        <input type="text" placeholder="Post You Have">
+                        <input type="text" placeholder="Your Company">
+                        <input type="email" placeholder="Your Email">
+                        <button class="button-30" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
     </div>
-    
+    <div class="bottom">
+        <div class="power">
+            Powered by Asmita<br><br>
+            <hr width="30%"><br>
+            <div>
+                <span style="margin: 0px 10px; color: white;">+91-8697331100</span>
+                <a href="mailto:bagasmita25@gmail.com" style="margin: 0px 10px;">bagasmita25@gmail.com</a>
+            </div>
+            
+            <div >
+                <a href="https://www.facebook.com/asmita.bag.31" style="margin: 0px 10px;"><i style="font-size:30px"
+                    class="fa">&#xf09a;</i>acebook</a>
+                <a href="https://www.instagram.com/asmitabag8/" style="margin: 0px 10px;"><i class="fa fa-instagram" style="font-size:36px"></i>instagram</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
 </body>
+
 </html>

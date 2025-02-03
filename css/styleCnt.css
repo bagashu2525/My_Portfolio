@@ -1,0 +1,92 @@
+.contact {
+    background-image: radial-gradient(#4d3636 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-color: var(--bg-dark);
+    padding-top: 100px;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    color: var(--text-color);
+    padding: 10px;
+}
+
+#lgit {
+    padding: 100px;
+    margin-left: 40px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactinfo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.contactcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactcard input {
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contactcard button {
+    width: 100px;
+    margin: 10px;
+}
+
+.power {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: rgb(186, 0, 0);
+    padding: 10px;
+}
+
+.power a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .contactinfo {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    input {
+        width: 300px;
+    }
+}
+
+@media (max-width: 550px) {
+    .contact {
+        width: 600px;
+
+    }
+
+    .power {
+        width: 600px;
+    }
+}
