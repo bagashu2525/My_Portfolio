@@ -100,9 +100,6 @@ body {
     align-items: center;
     
 }
-#theme-switch svg{
-    
-}
 #theme-switch svg:last-child{
 display:none;
 }
