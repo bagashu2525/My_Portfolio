@@ -568,13 +568,6 @@ display:none;
     transform: scale(1.05);
     box-shadow: 0px 0px 30px rgb(167, 0, 0);
 }
-@media (max-width: 550px) {
-    .projects{
-        width:600px;
-        
-    }
-    
-}
 
 .projectimg{
     height: 100px;
@@ -606,7 +599,7 @@ display:none;
 .github{
     position: absolute;
     bottom: 5px;
-    right: 10px;
+    right: 25%;
     width:10vw;
     height: 4vh;
     border: 2px solid rgb(128, 0, 0);
@@ -622,6 +615,17 @@ display:none;
     background-color: var(--light-shade);
     text-shadow: black;
 }
+@media (max-width: 550px) {
+    .projects{
+        width:600px;
+        
+    }
+    .github{
+        width: 100px;
+    }
+    
+}
+
 
 /* skill */
 .skills{
