@@ -206,7 +206,7 @@ display:none;
     border-radius: 25% 25% 23% 23% / 0% 0% 25% 25%;
     padding-top: 100px;
     height: 100%;
-    width: 100%;
+    width: 103%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -216,7 +216,7 @@ display:none;
 
 @media (max-width: 550px) {
     .main {
-        width: 600px;
+        width: 650px;
 
     }
 
@@ -657,7 +657,7 @@ display:none;
 }
 @media (max-width: 550px) {
     .about {
-        width: 600px;
+        width: 650px;
 
     }
 
@@ -788,7 +788,7 @@ display:none;
 }
 @media (max-width: 550px) {
     .projects{
-        width:600px;
+        width:650px;
         
     }
     .github{
@@ -908,7 +908,7 @@ display:none;
 }
 @media (max-width: 550px) {
     .skills {
-        width: 600px;
+        width: 650px;
 
     }
 
@@ -1115,11 +1115,11 @@ form {
 
 @media (max-width: 550px) {
     .contact {
-        width: 600px;
+        width: 650px;
 
     }
 
     .power {
-        width: 600px;
+        width: 650px;
     }
 }
