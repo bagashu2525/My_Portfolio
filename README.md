@@ -19,6 +19,9 @@ This is my personal portfolio website, where my skills, projects, and education 
 - Frontend: HTML, CSS, JavaScript
 - Libraries: Typed.js, ScrollReveal.js, FontAwesome
 
+## 🤖 Live Demo
+https://bagashu2525.github.io/My_Portfolio/
+
 ## 📸 Screenshots
 
 ![App Screenshot](Images/ssdark.png)
