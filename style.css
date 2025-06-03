@@ -19,6 +19,7 @@ html {
     --shadowcolor: rgba(145, 1, 1, 0.8);
     --theme-color: white; 
     --theme-color2: black;
+    --backgnd: radial-gradient(#4d3636 1px, transparent 1px);
     color: var(--text-color);
     
 
@@ -26,7 +27,7 @@ html {
 .light{
     margin: 0;
     padding: 0;
-    --base-color: #ffffff;
+    --base-color: #eddcdc;
     --text-color: rgb(0, 0, 0);
     --light-shade: red;
     --dark-shade:  #910101;;
@@ -527,7 +528,6 @@ display:none;
 /* project*/
 
 .projects{
-    /* background-color:  rgb(0, 0, 0);; */
     padding-top: 100px;
     width: 100%;
     height: 100%;
@@ -627,66 +627,107 @@ display:none;
 }
 
 
-/* skill */
-.skills{
+
+/* Skills Section Styles */
+.skills {
     padding-top: 100px;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#4d3636 1px, transparent 1px);
-    background-size: 22px 22px;
-    background-color: var(--base-color);
+    background-color: var(--backgnd);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
-.skillinfo{
-    background-color: var(--dark-shade);
-    box-shadow: 0px 0px 20px var(--light-shade);
+
+.skillinfo {
     margin-top: 50px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    height: auto;
-    width: 60%;
-}
-.skillicon{
-    background-color: var(--base-color);
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 20%;
-    max-width: 150px;
-    margin: 10px ;
-    transform: scale(1);
-}
-.skillicon:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 5px 10px var(--light-shade);
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-    .skillinfo {
-        width: 80%; /* Make it full-width for smaller screens */
-    }
-    .skillicon {
-        width: 40%; /* Adjust width for smaller icons on mobile */
-        height: 80px; /* Reduce height for smaller screens */
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 45%;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.skill-name {
+    flex: 0 0 120px;
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-family: "Signika Negative", sans-serif;
+}
+
+.skill-bar {
+    flex: 1;
+    height: 12px;
+    background-color: rgba(77, 77, 77, 0.366);
+    border-radius: 6px;
+    overflow: hidden;
+    min-width: 150px;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--theme-color);
+    border-radius: 6px;
+    width: 0; /* Start at 0 width */
+    transition: width 1.5s ease-in-out;
+}
+
+.skill-percentage {
+    flex: 0 0 50px;
+    text-align: right;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Animation for skill bars */
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--target-width); }
+}
+
+.skill-progress {
+    animation: fillBar 1.5s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .skill-item {
+        width: 100%;
     }
 }
-@media (max-width: 550px) {
-    .skills{
-        width:600px;
-        
+
+@media (max-width: 480px) {
+    .skillinfo {
+        width: 95%;
+        padding: 10px;
+        gap: 15px;
     }
-    
+
+    .skill-item {
+        min-width: 250px;
+        padding: 5px;
+    }
+
+    .skill-name {
+        flex: 0 0 100px;
+        font-size: 1em;
+    }
 }
 
 /* education */
@@ -855,7 +896,7 @@ form {
     align-items: center;
     width: auto;
     height: auto;
-    background-color: var(--light-shade);
+    background-color: rgb(177, 0, 0);
     padding: 10px;
     color: white;
 }

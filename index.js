@@ -63,3 +63,4 @@ themeswitch.addEventListener("click",()=>{
   lightmode = localStorage.getItem('light')
   lightmode !== "active" ? enablelightmode() : disablelightmode()
 })
+
