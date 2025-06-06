@@ -100,6 +100,7 @@ function animateCounter(element, start, end, duration) {
     }, stepTime);
 }
 
+// EmailJS
 // Intersection Observer for triggering the animation
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
