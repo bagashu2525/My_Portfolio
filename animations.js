@@ -109,7 +109,7 @@ const statsObserver = new IntersectionObserver((entries) => {
             const projectsCount = document.getElementById('projects-count');
             const techCount = document.getElementById('tech-count');
             
-            animateCounter(experienceCount, 0, 2, 1500);
+            animateCounter(experienceCount, 0, 1, 1500);
             animateCounter(projectsCount, 0, 10, 1500);
             animateCounter(techCount, 0, 5, 1500);
             
