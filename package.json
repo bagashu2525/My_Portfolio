@@ -1,5 +1,27 @@
 {
   "dependencies": {
-    "@emailjs/browser": "^4.4.1"
+    "@emailjs/browser": "^4.4.1",
+    "dotenv": "^16.5.0"
+  },
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is my personal portfolio website, where my skills, projects, and education are all placed. The site is coded using HTML, CSS, and JavaScript, with a lot of interactivity: animation, dark mode toggle, responsive navigation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bagashu2525/My_Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bagashu2525/My_Portfolio/issues"
+  },
+  "homepage": "https://github.com/bagashu2525/My_Portfolio#readme",
+  "devDependencies": {
+    "vite": "^6.3.5"
   }
 }

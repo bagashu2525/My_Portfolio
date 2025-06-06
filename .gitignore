@@ -1,0 +1,20 @@
+# Environment variables and credentials
+.env
+.env.local
+.env.*.local
+credentials.js
+
+# Dependencies
+node_modules/
+
+# Build files
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db 

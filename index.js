@@ -146,22 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Initialize EmailJS
+import credentials from './credentials.js';
 
-(function() {
-    // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-    emailjs.init("JNHdAPrMZme-8kJxr");
-})();
+// Initialize EmailJS with public key
+emailjs.init(credentials.publicKey);
 
 // Handle contact form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    // Show loading state
-    const submitButton = this.querySelector('button[type="submit"]');
-    const originalButtonText = submitButton.textContent;
-    submitButton.textContent = 'Sending...';
-    submitButton.disabled = true;
-
     // Get form data
     const formData = {
         firstName: document.getElementById('firstName').value,
@@ -172,32 +165,23 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         message: document.getElementById('message').value
     };
 
-    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service and template IDs
-    emailjs.send('service_t5hk1ad', 'template_t8pfocw', formData)
-    .then(function() {
-      Swal.fire({
-        title: "Success!",
-        text: "Message sent successfully!",
-        icon: "success",
-        confirmButtonText: "OK"
-      });
-        // Reset form
-        document.getElementById('contact-form').reset();
-    })
-    .catch(function(error) {
-      Swal.fire({
-        title: "Error!",
-        text: "Failed to send message. Please try again.",
-        icon: "error",
-        confirmButtonText: "Retry"
-      });
-        console.error('EmailJS error:', error);
-    })
-    .finally(function() {
-        // Reset button state
-        submitButton.textContent = originalButtonText;
-        submitButton.disabled = false;
-    });
-
+    // Send email using EmailJS
+    emailjs.send(credentials.serviceId, credentials.templateId, formData)
+        .then(function(response) {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Your message has been sent successfully!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+            document.getElementById('contact-form').reset();
+        }, function(error) {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Failed to send message. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        });
 });
 
