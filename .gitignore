@@ -3,7 +3,7 @@
 .env.local
 .env.*.local
 credentials.js
-index.js
+animations.js
 
 # Dependencies
 node_modules/
