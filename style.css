@@ -8,6 +8,7 @@ html, body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    
 }
 
 * {
@@ -157,7 +158,7 @@ img {
 }
 
 :root{
-    --base-color: #1a1f2c;
+    --base-color: #101930;
     --text-color: #e8eaed;
     --light-shade: #00b4d8;
     --dark-shade: #0077b6;
@@ -165,7 +166,7 @@ img {
     --shadowcolor: rgba(0, 119, 182, 0.3);
     --theme-color: #00b4d8;
     --theme-color2: #1a1f2c;
-    --backgnd: radial-gradient(#2a3449 1px, transparent 1px);
+    --backgnd: radial-gradient(#1d2331 1px, transparent 1px);
     color: var(--text-color);
     --box-color: #2a3449;
 }
@@ -188,7 +189,7 @@ img {
 body {
     /* background-color: black; */
     width: 100%;
-    background-image: radial-gradient(#4d3636 1px, transparent 1px);
+    background-image: radial-gradient(#2d475e 1px, transparent 1px);
     background-size: 22px 22px;
     background-color:var(--base-color);
 
@@ -895,9 +896,9 @@ display:none;
     padding-top: 100px;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#4d3636 1px, transparent 1px);
+    /* background-image: radial-gradient(#4d3636 1px, transparent 1px); */
     background-size: 22px 22px;
-    background-color:var(--base-color);
+    /* background-color:var(--base-color); */
 }
 
 .about-content {
@@ -1034,9 +1035,9 @@ display:none;
     padding-top: 100px;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#4d3636 1px, transparent 1px);
+    /* background-image: radial-gradient(#2f3b4b 1px, transparent 1px); */
     background-size: 22px 22px;
-    background-color:var(--base-color);
+    /* background-color:var(--base-color); */
 }
 .projectinfo {
     height: auto;
@@ -1069,6 +1070,7 @@ display:none;
     height: 200px;
     width: 100%;
     overflow: hidden;
+    transition: opacity 0.3s ease;
 }
 
 .projectimg img {
@@ -1078,10 +1080,6 @@ display:none;
     transition: transform 0.3s ease;
 }
 
-.project1:hover .projectimg img {
-    transform: scale(1.1);
-}
-
 .projectname {
     height: auto;
     width: 100%;
@@ -1089,6 +1087,18 @@ display:none;
     color: var(--text-color);
     font-size: 1.2rem;
     font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.toolsname {
+    position: absolute;
+    bottom: 3rem;
+    left: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    transition: opacity 0.3s ease;
 }
 
 .projectdescription {
@@ -1100,31 +1110,26 @@ display:none;
     transition: all 0.3s ease;
     position: absolute;
     background: var(--base-color);
-    top: 200px; /* Adjusted to start from the bottom of the image */
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     display: flex;
-    align-items: flex-start; /* Changed to start from top */
+    align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    padding-top: 2rem; /* Added more padding at the top */
+    padding-top: 2rem;
 }
 
 .project1:hover .projectdescription {
     opacity: 1;
     transform: translateY(0);
-    top: 0; /* Slides up to cover the entire card on hover */
 }
 
-.toolsname {
-    position: absolute;
-    bottom: 3rem;
-    left: 1rem;
-    padding: 0.5rem;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
+.project1:hover .projectimg,
+.project1:hover .projectname,
+.project1:hover .toolsname {
+    opacity: 0;
 }
 
 .github {
